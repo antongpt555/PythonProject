@@ -1,0 +1,25 @@
+/*
+   Вместо @font-face с Rondana подключаем Google Fonts: Jura.
+   Можно через import в CSS или <link> в <head> index.html.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap');
+
+/* Общие стили для html и body */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #FFFFFF 0%, #D3D3D3 100%);
+  /* Вместо Rondana-Regular теперь используем Jura */
+  font-family: 'Jura', sans-serif;
+}
+
+/* Контейнер для анимации */
+#random-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(180deg, #FFFFFF 0%, #D3D3D3 100%);
+}
