@@ -24,3 +24,4 @@ document.fonts.ready.then(() => {
     }, 2500);
   }, 300);
 });
+
