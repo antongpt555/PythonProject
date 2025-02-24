@@ -1,10 +1,15 @@
-/*
-   Вместо @font-face с Rondana подключаем Google Fonts: Jura.
-   Можно через import в CSS или <link> в <head> index.html.
-*/
+@font-face {
+  font-family: 'NeospaceExpanded';
+  src: url('/static/fonts/Neospace-Circuit-Expanded.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap');
 
-/* Общие стили для html и body */
+/* Общие стили */
 html, body {
   width: 100%;
   height: 100%;
@@ -12,14 +17,62 @@ html, body {
   padding: 0;
   overflow: hidden;
   background: linear-gradient(180deg, #FFFFFF 0%, #D3D3D3 100%);
-  /* Вместо Rondana-Regular теперь используем Jura */
   font-family: 'Jura', sans-serif;
 }
 
-/* Контейнер для анимации */
+/* Контейнер для сцены */
 #random-container {
   width: 100%;
-  height: 100%;
+  height: 100vh; /* Фикс: теперь контейнер занимает всю высоту экрана */
   position: relative;
   background: linear-gradient(180deg, #FFFFFF 0%, #D3D3D3 100%);
+}
+
+/* Заголовок */
+#headline {
+  font-family: 'NeospaceExpanded', sans-serif; /* Фикс: правильное название шрифта */
+  font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+}
+
+/* Слоган */
+#slogan {
+  font-family: 'Jura', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff7f00;
+}
+
+/* Кнопки */
+.button-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  font-family: 'Jura', sans-serif;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #ff7f00;
 }

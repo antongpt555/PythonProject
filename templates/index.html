@@ -2,28 +2,24 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>neuromarket №1 </title>
-
-  <!-- Подключаем файл стилей через Flask -->
+  <title>neuromarket №1</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-
-  <!-- Google Fonts для слогана (Jura) -->
   <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Подключаем Three.js -->
+  <!-- Подключаем библиотеки -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <!-- Подключаем GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-
-  <script>
-    console.log("=== index.html is loaded and running ===");
-  </script>
 </head>
 <body>
-  <!-- Контейнер для анимации -->
   <div id="random-container"></div>
 
-  <!-- Подключаем основной скрипт -->
+  <!-- Модули (каждый отвечает за свой блок) -->
+  <script src="{{ url_for('static', filename='js/scene.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/headline.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/slogan.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/buttons.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+
+  <!-- Основной файл -->
   <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>
